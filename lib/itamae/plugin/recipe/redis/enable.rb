@@ -3,13 +3,9 @@
 service_name = \
   case node[:platform]
   when 'debian', 'ubuntu'
-    service 'redis-server' do
-      action [:enable, :start]
-    end
+    'redis-server'
   when 'redhat', 'fedora'
-    service 'redis' do
-      action [:enable, :start]
-    end
+    'redis'
   else
     fail "Sorry, your platform(#{node[:platform]}) is not supported yet."
   end

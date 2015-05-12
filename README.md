@@ -22,10 +22,49 @@ Or install it yourself as:
 
 ### Recipe
 
+#### package recipe
+
+Install redis package.
+
 ```
 # your recipe
 include_recipe 'redis::package'
 ```
+
+#### config recipe
+
+Configure redis.
+
+```
+# your recipe
+include_recipe 'redis::package'
+include_recipe 'redis::config'
+```
+
+NOTE: `config` recipe depend on `package` recipe.
+
+##### Node
+
+```
+redis:
+  port: 6379
+```
+
+| name | description |
+|:-----|:------------|
+| redis.port | port number of redis |
+
+#### enable recipe
+
+Enable redis service.
+
+```
+# your recipe
+include_recipe 'redis::package'
+include_recipe 'redis::enable'
+```
+
+NOTE: `enable` recipe depend on `package` recipe.
 
 ## Contributing
 
