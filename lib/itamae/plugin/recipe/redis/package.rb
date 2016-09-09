@@ -17,4 +17,6 @@ when 'redhat', 'fedora', 'amazon'
     version redis_version unless redis_version.nil?
     options '--enablerepo=epel'
   end
+else
+  fail "Sorry, your platform(#{node[:platform]}) is not supported yet."
 end
