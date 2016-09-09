@@ -12,7 +12,7 @@ when 'debian', 'ubuntu'
   package 'redis-server' do
     version redis_version unless redis_version.nil?
   end
-when 'redhat', 'fedora'
+when 'redhat', 'fedora', 'amazon'
   package 'redis' do
     version redis_version unless redis_version.nil?
     options '--enablerepo=epel'
