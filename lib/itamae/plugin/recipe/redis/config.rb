@@ -1,5 +1,7 @@
 # Configure redis
 
+include_recipe "package"
+
 node.reverse_merge!(
   redis: {
     port: 6379

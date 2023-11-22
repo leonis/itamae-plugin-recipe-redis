@@ -1,5 +1,7 @@
 # Enable redis service
 
+include_recipe "package"
+
 service_name = \
   case node[:platform]
   when 'debian', 'ubuntu'

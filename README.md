@@ -37,11 +37,8 @@ Configure redis.
 
 ```
 # your recipe
-include_recipe 'redis::package'
 include_recipe 'redis::config'
 ```
-
-NOTE: `config` recipe depend on `package` recipe.
 
 ##### Node
 
@@ -60,11 +57,8 @@ Enable redis service.
 
 ```
 # your recipe
-include_recipe 'redis::package'
 include_recipe 'redis::enable'
 ```
-
-NOTE: `enable` recipe depend on `package` recipe.
 
 ## Contributing
 
